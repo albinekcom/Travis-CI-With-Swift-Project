@@ -9,7 +9,7 @@ osx_image:
 
 script:
   - swift package generate-xcodeproj
-  - xcodebuild test -scheme Lottery -destination platform="macOS" -enableCodeCoverage YES
+  - xcodebuild test -scheme Travis-CI-With-Swift-Project -destination platform="macOS" -enableCodeCoverage YES
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
